@@ -1,6 +1,6 @@
 {
-  "name": "Open WebUI",
-  "short_name": "WebUI",
+  "name": "Invariance AI Toolkit",
+  "short_name": "AI Toolkit",
   "icons": [
     {
       "src": "/static/web-app-manifest-192x192.png",

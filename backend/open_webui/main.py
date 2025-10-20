@@ -474,7 +474,6 @@ from open_webui.utils.middleware import process_chat_payload, process_chat_respo
 from open_webui.utils.access_control import has_access
 
 from open_webui.utils.auth import (
-    get_license_data,
     get_http_authorization_cred,
     decode_token,
     get_admin_user,
@@ -553,9 +552,6 @@ async def lifespan(app: FastAPI):
     if RESET_CONFIG_ON_START:
         reset_config()
 
-    if LICENSE_KEY:
-        get_license_data(app, LICENSE_KEY)
-
     # This should be blocking (sync) so functions are not deactivated on first /get_models calls
     # when the first user lands on the / route.
     log.info("Installing external dependencies of functions and tools...")
@@ -609,7 +605,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Open WebUI",
+    title="Invariance AI Toolkit",
     docs_url="/docs" if ENV == "dev" else None,
     openapi_url="/openapi.json" if ENV == "dev" else None,
     redoc_url=None,
