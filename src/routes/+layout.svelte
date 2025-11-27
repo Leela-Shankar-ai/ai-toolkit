@@ -618,7 +618,7 @@
 			// Save Backend Status to Store
 			await config.set(backendConfig);
 			// Always use our custom name instead of the backend value
-			await WEBUI_NAME.set('Invariance AI Toolkit');
+			await WEBUI_NAME.set('SSKL AI Toolkit');
 
 			if ($config) {
 				await setupSocket($config.features?.enable_websocket ?? true);
